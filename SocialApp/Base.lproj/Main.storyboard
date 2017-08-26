@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -18,58 +18,57 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FlowerBG" translatesAutoresizingMaskIntoConstraints="NO" id="ZZc-iF-jth">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FlowerBG" translatesAutoresizingMaskIntoConstraints="NO" id="ZZc-iF-jth">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="Kru-JH-syG">
-                                <rect key="frame" x="75" y="233" width="224" height="200"/>
-                                <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" alpha="0.94999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="email" textAlignment="center" minimumFontSize="19" background="email" translatesAutoresizingMaskIntoConstraints="NO" id="DyB-bF-pIU">
-                                        <rect key="frame" x="0.0" y="0.0" width="224" height="44.5"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="19"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
-                                    </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" alpha="0.94999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" textAlignment="center" minimumFontSize="19" background="email" translatesAutoresizingMaskIntoConstraints="NO" id="2ET-II-wck">
-                                        <rect key="frame" x="0.0" y="77.5" width="224" height="45"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="19"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EGr-f1-VeF">
-                                        <rect key="frame" x="0.0" y="155.5" width="224" height="44.5"/>
-                                        <color key="backgroundColor" red="0.99943345785140991" green="0.83203387260437012" blue="0.7021324634552002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="19"/>
-                                        <state key="normal" title="login"/>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="2O5-92-zoe"/>
-                                    <constraint firstAttribute="width" constant="224" id="2Yf-w3-MnL"/>
-                                </constraints>
-                            </stackView>
+                            <textField opaque="NO" clipsSubviews="YES" alpha="0.94999999999999996" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="email" textAlignment="center" minimumFontSize="19" translatesAutoresizingMaskIntoConstraints="NO" id="DyB-bF-pIU">
+                                <rect key="frame" x="48" y="324" width="224" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.8376659179" blue="0.90303856220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="19"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" alpha="0.94999999999999996" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="password" textAlignment="center" minimumFontSize="19" translatesAutoresizingMaskIntoConstraints="NO" id="2ET-II-wck">
+                                <rect key="frame" x="48" y="388" width="224" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.71668831929999999" green="0.98296662410000002" blue="0.87000007049999994" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="19"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EGr-f1-VeF">
+                                <rect key="frame" x="48" y="448" width="224" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.99943345785140991" green="0.83203387260437012" blue="0.7021324634552002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="19"/>
+                                <state key="normal" title="login"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Kru-JH-syG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="58e-4P-Yix"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ZZc-iF-jth" secondAttribute="bottom" id="K7u-T5-kFk"/>
                             <constraint firstAttribute="trailing" secondItem="ZZc-iF-jth" secondAttribute="trailing" id="ZEi-Oy-dMg"/>
                             <constraint firstItem="ZZc-iF-jth" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="edb-jq-yFe"/>
-                            <constraint firstItem="Kru-JH-syG" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="fPE-wb-hXU"/>
                             <constraint firstItem="ZZc-iF-jth" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="zdX-DU-nNl"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailField" destination="DyB-bF-pIU" id="JLU-3i-Q5M"/>
+                        <outlet property="loginButton" destination="EGr-f1-VeF" id="ReG-mx-Hl3"/>
+                        <outlet property="passwordField" destination="2ET-II-wck" id="8IZ-sc-UeH"/>
+                        <outlet property="view" destination="8bC-Xf-vdC" id="kvx-JJ-v5V"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-121" y="73"/>
+            <point key="canvasLocation" x="-121.875" y="72.5"/>
         </scene>
     </scenes>
     <resources>
         <image name="FlowerBG" width="320" height="568"/>
-        <image name="email" width="224" height="35"/>
     </resources>
 </document>
