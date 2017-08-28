@@ -20,14 +20,17 @@ class SignInVC : UIViewController {
 
                 // Width
                 let screenWidth = UIScreen.main.bounds.width
-                let fieldAndButtonWidth = screenWidth * 0.7
+//                let fieldAndButtonWidth = screenWidth * 0.7
+                let fieldAndButtonWidth = screenWidth * 0.8
+
                 emailField.frame.size.width = fieldAndButtonWidth
                 passwordField.frame.size.width = fieldAndButtonWidth
                 loginButton.frame.size.width = fieldAndButtonWidth
                 
                 // Height
                 let screenHeight = UIScreen.main.bounds.height
-                let fieldAndButtonHeight = screenHeight * 0.0598
+//                let fieldAndButtonHeight = screenHeight * 0.0598
+                let fieldAndButtonHeight = screenHeight * 0.07
                 emailField.frame.size.height = fieldAndButtonHeight
                 passwordField.frame.size.height = fieldAndButtonHeight
                 loginButton.frame.size.height = fieldAndButtonHeight
