@@ -14,6 +14,7 @@ import FBSDKLoginKit
 
 class SignInVC : UIViewController, UITextFieldDelegate {
 
+        @IBOutlet var mainView: UIView!
         @IBOutlet weak var emailField: UITextField!
         @IBOutlet weak var passwordField: UITextField!
         @IBOutlet weak var loginButton: UIButton!
@@ -21,6 +22,9 @@ class SignInVC : UIViewController, UITextFieldDelegate {
         
         override func viewDidLoad() {
                 super.viewDidLoad()
+                
+                emailField.delegate = self
+                passwordField.delegate = self
 
                 // Width
                 let screenWidth = UIScreen.main.bounds.width
@@ -75,11 +79,38 @@ class SignInVC : UIViewController, UITextFieldDelegate {
                 }
         }
 
-        func textFieldDidBeginEditing(_ textField: UITextField) {
-                print("Editing????????")
+        func textFieldDidBeginEditing(_ emailField: UITextField) {
+                print("Text Field Did Begin Editing")
+                
+                // Moving View Up
+                let currentMainViewOriginY = mainView.frame.origin.y
+                mainView.frame.origin.y = currentMainViewOriginY - 50
         }
         
+//        func textFieldDidBeginEditing(passwordField textField: UITextField) {
+//                print("Text Field Did Begin Editing")
+//                
+//                // Moving View Up
+//                let currentMainViewOriginY = mainView.frame.origin.y
+//                mainView.frame.origin.y = currentMainViewOriginY - 80
+//        }
+        
+//        func textFieldDidEndEditing(emailField textField: UITextField) {
+//                print("Text Field Did Begin Editing")
+//                
+//                let currentMainViewOriginY = mainView.frame.origin.y
+//                mainView.frame.origin.y = currentMainViewOriginY + 50
+//        }
+        
+//        func textFieldDidEndEditing(passwordField textField: UITextField) {
+//                print("Text Field Did Begin Editing")
+//                
+//                let currentMainViewOriginY = mainView.frame.origin.y
+//                mainView.frame.origin.y = currentMainViewOriginY + 80
+//        }
+        
         func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+                self.view.endEditing(true)
                 print("Return -----------------------------")
                 return true
         }
