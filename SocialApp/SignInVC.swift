@@ -79,12 +79,15 @@ class SignInVC : UIViewController, UITextFieldDelegate {
                 }
         }
 
-        func textFieldDidBeginEditing(_ emailField: UITextField) {
+        // Keyboard UI Stuff 
+        
+        func textFieldDidBeginEditing(_ emailField: UITextField)
+        {
                 print("Text Field Did Begin Editing")
                 
                 // Moving View Up
                 let currentMainViewOriginY = mainView.frame.origin.y
-                mainView.frame.origin.y = currentMainViewOriginY - 50
+                mainView.frame.origin.y = currentMainViewOriginY - 200
         }
         
 //        func textFieldDidBeginEditing(passwordField textField: UITextField) {
@@ -102,16 +105,17 @@ class SignInVC : UIViewController, UITextFieldDelegate {
 //                mainView.frame.origin.y = currentMainViewOriginY + 50
 //        }
         
-//        func textFieldDidEndEditing(passwordField textField: UITextField) {
-//                print("Text Field Did Begin Editing")
-//                
-//                let currentMainViewOriginY = mainView.frame.origin.y
-//                mainView.frame.origin.y = currentMainViewOriginY + 80
-//        }
-        
+        func textFieldDidEndEditing(_ textField: UITextField)
+        {
+                print("Text Field Did Begin Editing")
+                
+                let currentMainViewOriginY = mainView.frame.origin.y
+                mainView.frame.origin.y = currentMainViewOriginY + 200
+        }
+
         func textFieldShouldReturn(_ textField: UITextField) -> Bool {
                 self.view.endEditing(true)
-                print("Return -----------------------------")
+                print("Return Pressed")
                 return true
         }
         
