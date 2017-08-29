@@ -29,7 +29,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="19"/>
-                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="continue"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" alpha="0.94999999999999996" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" textAlignment="center" minimumFontSize="19" background="passwordBlur" translatesAutoresizingMaskIntoConstraints="NO" id="2ET-II-wck" customClass="LoginTextField" customModule="SocialApp" customModuleProvider="target">
                                 <rect key="frame" x="48" y="388" width="224" height="37"/>
@@ -43,6 +43,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="19"/>
                                 <state key="normal" backgroundImage="loginButton"/>
+                                <connections>
+                                    <action selector="signInTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3LY-SN-BoQ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -55,7 +58,7 @@
                     </view>
                     <connections>
                         <outlet property="emailField" destination="DyB-bF-pIU" id="JLU-3i-Q5M"/>
-                        <outlet property="loginButton" destination="EGr-f1-VeF" id="ReG-mx-Hl3"/>
+                        <outlet property="loginButton" destination="EGr-f1-VeF" id="CJs-KX-qnR"/>
                         <outlet property="passwordField" destination="2ET-II-wck" id="8IZ-sc-UeH"/>
                         <outlet property="view" destination="8bC-Xf-vdC" id="kvx-JJ-v5V"/>
                     </connections>

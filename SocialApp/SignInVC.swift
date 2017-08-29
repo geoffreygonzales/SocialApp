@@ -7,8 +7,12 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
+import FBSDKCoreKit
+import FBSDKLoginKit
 
-class SignInVC : UIViewController {
+class SignInVC : UIViewController, UITextFieldDelegate {
 
         @IBOutlet weak var emailField: UITextField!
         @IBOutlet weak var passwordField: UITextField!
@@ -50,6 +54,69 @@ class SignInVC : UIViewController {
                 
         }
 
+        @IBAction func signInTapped(_ sender: Any) {
+                
+                if let email = emailField.text, let password = passwordField.text {
+                        Auth.auth().signIn(withEmail: email, password: password, completion: { (user, error) in
+                                
+                                if error == nil {
+                                        print("Email User Aunthecatied with Firebase")
+                                } else {
+                                        Auth.auth().createUser(withEmail: email, password: password, completion: { (user, error) in
+                                                
+                                                if error != nil {
+                                                        print("Unable to Authentiate with Firebase using email")
+                                                } else {
+                                                        print("Sucessfully authentied with firebase email")
+                                                }
+                                        })
+                                }
+                        })
+                }
+        }
 
+        func textFieldDidBeginEditing(_ textField: UITextField) {
+                print("Editing????????")
+        }
+        
+        func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+                print("Return -----------------------------")
+                return true
+        }
+        
+        
+        
+        
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
