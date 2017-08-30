@@ -11,8 +11,10 @@ import Firebase
 import FirebaseAuth
 import FBSDKCoreKit
 import FBSDKLoginKit
+import SwiftKeychainWrapper
 
-class SignInVC : UIViewController, UITextFieldDelegate {
+class SignInVC : UIViewController, UITextFieldDelegate
+{
 
         @IBOutlet var mainView: UIView!
         @IBOutlet weak var emailField: UITextField!
@@ -20,7 +22,8 @@ class SignInVC : UIViewController, UITextFieldDelegate {
         @IBOutlet weak var loginButton: UIButton!
  
         
-        override func viewDidLoad() {
+        override func viewDidLoad()
+        {
                 super.viewDidLoad()
                 
                 emailField.delegate = self
@@ -57,26 +60,78 @@ class SignInVC : UIViewController, UITextFieldDelegate {
                 loginButton.frame.origin.x = originX
                 
         }
+        
+        override func viewDidAppear(_ animated: Bool)
+        {
+                if let _ = KeychainWrapper.standard.string(forKey: KEY_UID)
+                {
+                        print("ID found in keychain")
+                        performSegue(withIdentifier: "goToFeed", sender: nil)
+                }
+        }
+        
+        func firebaseAuth(_ credential : AuthCredential)
+        {
+                Auth.auth().signIn(with: credential) { (user, error) in
+                        
+                        if error != nil {
+                                print("Euable to autheticate with Firebase")
+                        } else {
+                                print("Sucessfully authenicated with Firebase")
+                                
+                                if let user = user
+                                {
+                                        self.completeSignIn(id: user.uid)
+                                }
+                        }
+                }
+        }
 
-        @IBAction func signInTapped(_ sender: Any) {
-                
-                if let email = emailField.text, let password = passwordField.text {
+        @IBAction func signInTapped(_ sender: Any)
+        {
+                if let email = emailField.text, let password = passwordField.text
+                {
                         Auth.auth().signIn(withEmail: email, password: password, completion: { (user, error) in
                                 
-                                if error == nil {
+                                if error == nil
+                                {
                                         print("Email User Aunthecatied with Firebase")
-                                } else {
+                                        
+                                        if let user = user
+                                        {
+                                                self.completeSignIn(id: user.uid)
+                                        }
+                                        
+                                }
+                                else
+                                {
                                         Auth.auth().createUser(withEmail: email, password: password, completion: { (user, error) in
                                                 
-                                                if error != nil {
+                                                if error != nil
+                                                {
                                                         print("Unable to Authentiate with Firebase using email")
-                                                } else {
+                                                }
+                                                else
+                                                {
                                                         print("Sucessfully authentied with firebase email")
+                                                        
+                                                        if let user = user
+                                                        {
+                                                                self.completeSignIn(id: user.uid)
+                                                        }
                                                 }
                                         })
                                 }
                         })
                 }
+        }
+        
+        func completeSignIn(id : String)
+        {
+                KeychainWrapper.standard.set(id, forKey: KEY_UID)
+                print("Data saved to keychain")
+                
+                performSegue(withIdentifier: "goToFeed", sender: nil)
         }
 
         // Keyboard UI Stuff 
@@ -113,7 +168,8 @@ class SignInVC : UIViewController, UITextFieldDelegate {
                 mainView.frame.origin.y = currentMainViewOriginY + 200
         }
 
-        func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        func textFieldShouldReturn(_ textField: UITextField) -> Bool
+        {
                 self.view.endEditing(true)
                 print("Return Pressed")
                 return true
