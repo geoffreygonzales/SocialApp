@@ -12,13 +12,13 @@ import SwiftKeychainWrapper
 
 class FeedVC: UIViewController
 {
-        @IBAction func signInTapped(_ sender: Any) {
-                
-                let keychainResult = KeychainWrapper.standard.removeObject(forKey: KEY_UID)
-                print("Removed ID From Keychain \(keychainResult)")
-                try! Auth.auth().signOut()
-                performSegue(withIdentifier: "backToSignIn", sender: nil)
-        }
+//        @IBAction func signInTapped(_ sender: Any) {
+//                
+//                let keychainResult = KeychainWrapper.standard.removeObject(forKey: KEY_UID)
+//                print("Removed ID From Keychain \(keychainResult)")
+//                try! Auth.auth().signOut()
+//                performSegue(withIdentifier: "backToSignIn", sender: nil)
+//        }
 
     override func viewDidLoad()
     {

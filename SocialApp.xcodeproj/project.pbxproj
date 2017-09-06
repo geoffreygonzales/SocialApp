@@ -10,6 +10,7 @@
 		631CDA74307357E612336A06 /* Pods_SocialAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F40B016A8ACB014EDF1207B2 /* Pods_SocialAppTests.framework */; };
 		8F79B03F1F562EFD008D8AA1 /* TODO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F79B03E1F562EFD008D8AA1 /* TODO.swift */; };
 		8F79B0411F563B8B008D8AA1 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F79B0401F563B8B008D8AA1 /* FeedVC.swift */; };
+		8F79B0471F58F23B008D8AA1 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F79B0461F58F23B008D8AA1 /* CircleView.swift */; };
 		8FC357871F4D1BC600B6A2F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC357861F4D1BC600B6A2F6 /* AppDelegate.swift */; };
 		8FC357891F4D1BC600B6A2F6 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC357881F4D1BC600B6A2F6 /* SignInVC.swift */; };
 		8FC3578C1F4D1BC600B6A2F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FC3578A1F4D1BC600B6A2F6 /* Main.storyboard */; };
@@ -49,6 +50,7 @@
 		7626100C3AFBB4968773CBB4 /* Pods_SocialApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocialApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F79B03E1F562EFD008D8AA1 /* TODO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TODO.swift; sourceTree = "<group>"; };
 		8F79B0401F563B8B008D8AA1 /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
+		8F79B0461F58F23B008D8AA1 /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		8FC357831F4D1BC600B6A2F6 /* SocialApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FC357861F4D1BC600B6A2F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8FC357881F4D1BC600B6A2F6 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 			children = (
 				8FFE94791F548A91007DB999 /* LoginTextField.swift */,
 				8FFE947B1F548D33007DB999 /* LoginButton.swift */,
+				8F79B0461F58F23B008D8AA1 /* CircleView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -527,6 +530,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8FFE947C1F548D33007DB999 /* LoginButton.swift in Sources */,
+				8F79B0471F58F23B008D8AA1 /* CircleView.swift in Sources */,
 				8F79B0411F563B8B008D8AA1 /* FeedVC.swift in Sources */,
 				8FC357891F4D1BC600B6A2F6 /* SignInVC.swift in Sources */,
 				8FFE947A1F548A91007DB999 /* LoginTextField.swift in Sources */,
