@@ -86,12 +86,16 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UGo-mY-AOq" userLabel="Header">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="65"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sign-out" translatesAutoresizingMaskIntoConstraints="NO" id="Nnb-2A-36e">
+                                    <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sign-out" translatesAutoresizingMaskIntoConstraints="NO" id="Nnb-2A-36e">
                                         <rect key="frame" x="8" y="17" width="42" height="34"/>
+                                        <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="42" id="Ipa-Y1-Git"/>
                                             <constraint firstAttribute="height" constant="34" id="kdE-j5-YbO"/>
                                         </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="kyf-V4-4Xm" appends="YES" id="qeN-hH-4OZ"/>
+                                        </connections>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.70075874540000005" green="0.91121055419999997" blue="0.95873193030000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -267,6 +271,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nhd-mt-bfX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="kyf-V4-4Xm">
+                    <connections>
+                        <action selector="signOutTapped:" destination="BFD-RN-6dS" id="KmL-Ht-3HP"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="866.25" y="73.943661971830991"/>
         </scene>
