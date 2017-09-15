@@ -12,7 +12,6 @@ import SwiftKeychainWrapper
 
 class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource
 {
-        
         @IBOutlet weak var tableView : UITableView!
         
         var posts = [Post]()
@@ -41,8 +40,6 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource
                         }
                         self.tableView.reloadData()
                 })
-                
-                
         }
         
         func numberOfSections(in tableView: UITableView) -> Int
@@ -57,10 +54,17 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         
         func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
         {
-//                let post = posts(indexPath.row)
-//                print(post.caption)
+                let post = posts[indexPath.row]
                 
-                return tableView.dequeueReusableCell(withIdentifier: "PostCell") as! PostCell
+                if let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell") as? PostCell
+                {
+                        cell.configureCell(post: post)
+                        return cell
+                }
+                else
+                {
+                        return PostCell()
+                }
         }
         
         @IBAction func signOutTapped(_ sender: Any)
@@ -72,17 +76,19 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource
                 performSegue(withIdentifier: "backToSignIn", sender: nil)
         }
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
