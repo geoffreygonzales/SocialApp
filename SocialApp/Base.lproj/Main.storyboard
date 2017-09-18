@@ -180,7 +180,7 @@
                                                                 <constraint firstAttribute="height" constant="46" id="O6L-8X-zqV"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="xOg-FO-dn3">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="xOg-FO-dn3">
                                                             <rect key="frame" x="0.0" y="51" width="304" height="173"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="173" id="2j3-aB-dLD"/>
