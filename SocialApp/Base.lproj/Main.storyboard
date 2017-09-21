@@ -256,6 +256,7 @@
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <outlet property="caption" destination="5KH-BG-XeA" id="GCu-oW-U6t"/>
+                                            <outlet property="likeImage" destination="BdE-BV-7qQ" id="TPQ-k3-nls"/>
                                             <outlet property="likesLabel" destination="WD5-fg-eFj" id="Vwy-A9-QI2"/>
                                             <outlet property="postImage" destination="xOg-FO-dn3" id="iDd-cd-sgk"/>
                                             <outlet property="profileImage" destination="8kq-YF-5hW" id="xpE-qe-AyX"/>
