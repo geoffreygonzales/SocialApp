@@ -41,7 +41,7 @@ class Dataservice
         
         var REF_POST_IMAGES : StorageReference
         {
-                return REF_POST_IMAGES
+                return _REF_POST_IMAGES
         }
         
         func createFirebaseDBUser(uid : String, userData : Dictionary<String, String>)
