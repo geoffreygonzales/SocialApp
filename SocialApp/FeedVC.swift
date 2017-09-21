@@ -114,6 +114,25 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
                         present(imagePicker, animated: true, completion: nil)
             }
             
+            func postToFirebase (imgURL : String)
+            {
+                        let post : Dictionary<String, Any> =
+                        [
+                                    "caption" : postField.text!,
+                                    "imageUrl" : imgURL,
+                                    "likes" : 0
+                        ]
+                        
+                        let firebasePost = Dataservice.ds.REF_POSTS.childByAutoId()
+                        firebasePost.setValue(post)
+                        
+                        postField.text = ""
+                        imageSelected = false
+                        imageAdd.image = UIImage(named : "add-image")
+                        
+                        tableView.reloadData()
+            }
+            
             @IBAction func postButtonTapped(_ sender: Any)
             {
                         guard let caption = postField.text, caption != "" else
@@ -145,6 +164,10 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
                                                 {
                                                             print("sucessfully loaded image to firebase storage")
                                                             let downloadURL = metaData?.downloadURL()?.absoluteString
+                                                            if let url = downloadURL
+                                                            {
+                                                                        self.postToFirebase(imgURL: url)
+                                                            }
                                                             
                                                             self.imageSelected = false
                                                 }
